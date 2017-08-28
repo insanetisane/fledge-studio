@@ -52,13 +52,13 @@ block main
       p Ready to get that website launched?  Get in touch and let us know a bit about your business and needs and we will be in touch within 24 hours.
       form(netlify)
         label Name
-          input(type="text", required)
+          input(type="text", name="name" required)
         label Email Address
-          input(type="email", required)
+          input(type="email", name="email" required)
         label Business Name
-          input(type="text")
+          input(type="text", name="business-name")
         label Current Website
-          input(type="url")
+          input(type="url", name="website")
         fieldgroup
           label
             input(type="radio", name="needed")
@@ -70,7 +70,7 @@ block main
             input(type="radio", name="needed")
             | Other
         label Message
-          textarea 
+          textarea(name="message") 
         button(type="submit") Submit
     
   footer.g-Footer
