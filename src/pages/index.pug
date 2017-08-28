@@ -11,13 +11,15 @@ block body
   header.g-Header
     .g-BgImg
     .g-Header_Logo
-      include /static/assets/img/fledge-logo.svg
+      //- include /static/assets/img/fledge-logo.svg
+      img(src="assets/img/fledge-logo.png", alt="")
     h1 Hassle-free websites for small businesses.
     a.b-Button(href="#contact") Contact us
 
 block main
   section.g-Section
-    h2 How we help
+    header
+      h2 How we help
     .g-Section_Content
       p Most small business owners we meet know they desperately need a website or to upgrade their current website, but they don’t know where to start, what platform to use, how to create their content and, most of all, when they will find the time to do it all. We get it.
       p.g-Text-large We help small-business owners create websites that grab the attention of their ideal client. Our goal is to speed up the website creation process and take the stress out of it.
@@ -26,7 +28,8 @@ block main
     .g-BgImg
 
   section.g-Section
-    h2 Who we are
+    header
+      h2 Who we are
     .g-Section_Content
       p We are Dillon and Rachel Headley, a husband and wife team based in Toronto, Canada.
       p Dillon is a senior web developer with five years experience building small and large websites and web applications both as a freelancer and for agencies.  He has
@@ -37,7 +40,9 @@ block main
     .g-BgImg
 
   section.g-Section
-    h2 Our recent work
+    header
+      h2 Our recent work
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, eum!
     .g-Section_Content
       img(src="assets/img/alice-woods-website.png", alt="Alice Woods photography website")
       h3 Alice Woods website
@@ -47,7 +52,8 @@ block main
       p.g-Text-large "..."
 
   section#contact.g-Bg-tint.g-Section
-    h2 Contact Us
+    header
+      h2 Contact Us
     .g-Section_Content
       p Ready to get that website launched?  Get in touch and let us know a bit about your business and needs and we will be in touch within 24 hours.
       form(netlify, name="contact")

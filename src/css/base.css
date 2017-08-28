@@ -7,7 +7,7 @@
   --base-color: #333;
   --light-grey: #fdfdfd;
   --sky-grey: #b0b6c6;
-  --base-spacing: 4rem;
+  --base-spacing: calc(2rem + 8vw);
 }
 
 *, *:before, *:after {
@@ -26,12 +26,19 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-weight: 500;
+  font-weight: 400;
+}
+
+p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 input:not([type=radio]) {
   display: block;
   width: 100%;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
 [type=radio] {

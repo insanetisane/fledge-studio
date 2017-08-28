@@ -1,9 +1,9 @@
 .g-Header {
   text-align: center;
-  padding: var(--base-spacing);
+  padding: 4rem var(--base-spacing) 10rem;
   
   position: relative;
-  min-height: 80vh;
+  min-height: 60vh;
 
   @supports(grid-auto-rows: 1fr) {
     display: grid;
@@ -15,6 +15,10 @@
   & svg * {
     fill: currentColor;
   }
+}
+
+.g-Header_Logo {
+  max-width: 300px;
 }
 
 .g-ImageBlock {
@@ -35,19 +39,19 @@
 }
 
 .g-Section {
-  padding: var(--base-spacing);
+  padding: 10rem var(--base-spacing);
 
   @supports(grid-auto-rows: 1fr) {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-column-gap: 2rem;
+    justify-content: space-between;
+    justify-items: start;
     @media(min-width: 600px) {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      grid-column-gap: var(--base-spacing);
-      justify-content: space-between;
-      justify-items: start;
     }
   }
 
-  & > h2 {
+  & h2 {
     margin-top: 0;
   }
 
@@ -72,4 +76,8 @@
 
 .g-Bg-tint {
   background-color: var(--light-grey);
+}
+
+.g-Text-large {
+  font-size: 1.5em;
 }
