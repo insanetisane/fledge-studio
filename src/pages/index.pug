@@ -1,8 +1,8 @@
 extends _layout.pug
 
-include /components/hello-world/_hello-world.pug
+include /components/hello-world/hello-world.pug
 
-block settings
+append settings
   -
     title = "Fledge Studio"
     description = "Hassle-free websites for small businesses."
@@ -16,7 +16,7 @@ block body
     h1 Hassle-free websites for small businesses.
     a.b-Button(href="#contact") Contact us
 
-block main
+append main
   section.g-Section
     header
       h2 How we help

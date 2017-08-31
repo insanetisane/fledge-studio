@@ -2,6 +2,7 @@ block settings
   -
     title = "Simple Starter"
     description = "A simple modular base with Pug Postcss and Babel"
+    stylesheets = []
 
 doctype html
 html
@@ -14,6 +15,9 @@ html
     block meta
       meta(name="description", content="#{description}")
     block styles
+      each stylesheet in stylesheets
+        link(rel='stylesheet', href=stylesheet)
+
       link(rel='stylesheet', href='assets/style.css')
     block head
   body

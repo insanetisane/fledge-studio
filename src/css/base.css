@@ -5,7 +5,7 @@
 
   --brand-color: #c90d3f;
   --base-color: #333;
-  --light-grey: #fdfdfd;
+  --light-grey: #efefef;
   --sky-grey: #b0b6c6;
   --base-spacing: calc(2rem + 8vw);
 }
@@ -20,9 +20,6 @@ body {
   font-weight: 300;
   color: var(--base-color);
   line-height: 1.4;
-  height: 100vh;
-  perspective: 2px;
-
 }
 
 h1, h2, h3, h4 {

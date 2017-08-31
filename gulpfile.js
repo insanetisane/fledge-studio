@@ -1,4 +1,5 @@
 const gulp =  require('gulp');
+const gutil =  require('gulp-util');
 const babel =  require('gulp-babel');
 const concat =  require('gulp-concat');
 const pug =  require('gulp-pug');
@@ -23,17 +24,13 @@ paths.css = [
   `${paths.src}/css/fonts.css`,
   `${paths.src}/css/base.css`,
   `${paths.src}/css/global.css`,
-  `${paths.src}/_components/**/*.css`,
+  `${paths.src}/components/**/*.css`,
 ]
 paths.scripts = [
+  `${paths.src}/js/util.js`,
+  `${paths.src}/components/**/*.js`,
   `${paths.src}/js/app.js`,
-  `${paths.src}/_components/**/*.js`,
 ]
-
-const handleError = function (err) {
-  // gutil.beep();
-  console.log(err);
-};
 
 const clean = () => del(paths.dest)
 
@@ -48,7 +45,7 @@ const html = (done) => {
       basedir: "./src/",
     }))
     .on('error', function(err) {
-      console.log(err);
+      gutil.log(err);
       done()
     })
     .pipe(gulp.dest(paths.dest))
@@ -63,7 +60,7 @@ const css = (done) => {
         autoprefixer,
     ]))
     .on('error', function(err) {
-      console.log(err);
+      gutil.log(err);
       done()
     })
     .pipe(gulp.dest(`${paths.dest}/assets`));
@@ -71,13 +68,13 @@ const css = (done) => {
 
 const scripts = (done) => {
   return gulp.src(paths.scripts, { sourcemaps: true })
+    .pipe(concat('app.js'))
     .pipe(babel())
     .on('error', function(err) {
-      console.log(err);
+      gutil.log(err);
       done()
     })
     // .pipe(uglify())
-    .pipe(concat('app.js'))
     .pipe(gulp.dest(`${paths.dest}/assets`));
 }
 
