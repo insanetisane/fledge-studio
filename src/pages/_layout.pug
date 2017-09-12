@@ -2,27 +2,35 @@ block settings
   -
     title = "Simple Starter"
     description = "A simple modular base with Pug Postcss and Babel"
-    stylesheets = []
+    page = ''
 
 doctype html
 html
   head
     meta(charset='utf-8')
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(http-equiv='x-ua-compatible' content='ie=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+
     block title
       title #{title}
-    block meta
-      meta(name="description", content="#{description}")
-    block styles
-      each stylesheet in stylesheets
-        link(rel='stylesheet', href=stylesheet)
 
-      link(rel='stylesheet', href='assets/style.css')
+    block meta
+      meta(name="description" content="#{description}")
+
+    block styles
+      //- link(rel='stylesheet' href='/assets/style.css')
+      link(defer rel='stylesheet' href='/assets/css/normalize.css')
+      link(defer rel='stylesheet' href='/assets/css/fonts.css')
+      link(defer rel='stylesheet' href='/assets/css/base.css')
+      link(defer rel='stylesheet' href='/assets/css/global.css')
     block head
-  body
+  body(id=page)
     block body
+
     main
       block main
+
+    block footer
+      include _footer
     block scripts
-      script(src='assets/app.js')
+      script(src='/assets/app.js')

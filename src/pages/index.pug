@@ -1,33 +1,32 @@
 extends _layout.pug
 
-include /components/hello-world/hello-world.pug
+include /mixins/hello-world.pug
 
 append settings
   -
     title = "Fledge Studio"
     description = "Hassle-free websites for small businesses."
-
+    page = 'index'
+  
+append head
+  link(rel="prefetch" href="/assets/img/fledge-logo.png" as="image")
+  link(rel="stylesheet" href="/assets/css/index.css")
+  style
+    //- include:sass /css/hero.scss
+  
 block body
-  header.g-Header
-    .g-BgImg
-    .g-Header_Logo
-      //- include /static/assets/img/fledge-logo.svg
-      img(src="assets/img/fledge-logo.png", alt="")
-    h1 Hassle-free websites for small businesses.
-    a.b-Button(href="#contact") Contact us
+  include _hero
 
 append main
-  section.g-Section
+  section
     header
       h2 How we help
     .g-Section_Content
       p Most small business owners we meet know they desperately need a website or to upgrade their current website, but they don’t know where to start, what platform to use, how to create their content and, most of all, when they will find the time to do it all. We get it.
       p.g-Text-large We help small-business owners create websites that grab the attention of their ideal client. Our goal is to speed up the website creation process and take the stress out of it.
-      a.b-Button(href="#contact") Contact us
-  .g-ImageBlock
-    .g-BgImg
+      a.b-button(href="#contact") Contact us
 
-  section.g-Section
+  section
     header
       h2 Who we are
     .g-Section_Content
@@ -35,23 +34,21 @@ append main
       p Dillon is a senior web developer with five years experience building small and large websites and web applications both as a freelancer and for agencies.  He has
       p Rachel is an experienced administrative professional and project manager.  She excels at listening to and communicating with clients, understanding their needs and helping them create effective content and designs.
       p.g-Text-large Together we are passionate about helping small-businesses succeed.
-      a.b-Button(href="#contact") Contact us
-  .g-ImageBlock
-    .g-BgImg
+      a.b-button(href="#contact") Contact us
 
-  section.g-Section
+  section
     header
       h2 Our recent work
       p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, eum!
     .g-Section_Content
-      img(src="assets/img/alice-woods-website.png", alt="Alice Woods photography website")
+      img(src="/assets/img/alice-woods-website.png", alt="Alice Woods photography website")
       h3 Alice Woods website
-      a.b-Button(href="#") www.alicewoods.com
+      a.b-button(href="#") www.alicewoods.com
       p Alice Woods is a Toronto-based photographer who has become successful just through her Instagram page.  We created and launched a portfolio website where she can display her favorite work, answers questions about her services, sell prints and get in touch with clients. 
       p Here’s what Alice has to say about working with us: 
-      p.g-Text-large "..."
+      p.g-text-large "..."
 
-  section#contact.g-Bg-tint.g-Section
+  section#contact.g-bg-tint
     header
       h2 Contact Us
     .g-Section_Content
@@ -78,7 +75,3 @@ append main
         label Message
           textarea(name="message") 
         button(type="submit") Submit
-    
-  footer.g-Footer
-    a(href="mailto:contact@fledgestudio.co") contact@fledgestudio.co
-    a(href="tel:contact@fledgestudio.co") 647-217-4207

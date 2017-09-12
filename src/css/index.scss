@@ -1,0 +1,27 @@
+@import "variables";
+
+#index {
+  main {
+    > section {
+      padding: 10rem $base_spacing;
+
+      @supports(grid-auto-rows: 1fr) {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-column-gap: 2rem;
+        justify-content: space-between;
+        justify-items: start;
+        @media(min-width: 600px) {
+          display: grid;
+        }
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      p:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

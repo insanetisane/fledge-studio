@@ -1,0 +1,21 @@
+@import "variables";
+
+.g-bgImg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(/assets/img/flying-bird.jpg);
+}
+
+.g-bg-tint {
+  background-color: $light_grey;
+}
+
+.g-text-large {
+  font-size: 1.5em;
+}

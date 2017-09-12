@@ -1,0 +1,37 @@
+@import "variables";
+#hero {
+  padding: 4rem $base_spacing 10rem;
+  position: relative;
+  min-height: 60vh;
+  &:before {
+    content: '';
+    position: absolute;
+    background-color: white;
+    z-index: -1;
+    width: 75%;
+    height: 100%;
+    top: 0;
+    right: calc(50% - 85px);
+    transform: skew(-20deg);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    background-image: url(/assets/img/flying-bird.jpg);
+    background-size: cover;
+    background-position: center right;
+    z-index: -2;
+    width: 75%;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
+  .logo {
+    font-weight: bold;
+    text-decoration: none;
+    color: currentColor;
+  }
+  h1 {
+    width: 45vw;
+  }
+}

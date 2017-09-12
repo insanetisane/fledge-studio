@@ -1,0 +1,15 @@
+@import "variables";
+
+#footer {
+  text-align: center;
+  padding: 8rem $base_spacing;
+  background-color: $sky_grey;
+  & a {
+    display: block;
+    color: currentColor;
+    text-decoration: none;
+  }
+  & a + a {
+    margin-top: 2rem;
+  }
+}

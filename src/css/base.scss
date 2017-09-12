@@ -1,13 +1,9 @@
+@import "variables";
+
 /* Base */
 :root {
   font-size: 10px;
   box-sizing: border-box;
-
-  --brand-color: #c90d3f;
-  --base-color: #333;
-  --light-grey: #efefef;
-  --sky-grey: #b0b6c6;
-  --base-spacing: calc(2rem + 8vw);
 }
 
 *, *:before, *:after {
@@ -18,7 +14,7 @@ body {
   font-size: 2.2rem;
   font-family: "HalisR", "Helvetica";
   font-weight: 300;
-  color: var(--base-color);
+  color: $base_color;
   line-height: 1.4;
 }
 
@@ -53,9 +49,9 @@ label {
   margin-bottom: 2rem;
 }
 
-button, .b-Button {
-  background-color: var(--brand-color);
-  border: 1px solid var(--brand-color);
+button, .b-button {
+  background-color: $brand_color;
+  border: 1px solid $brand_color;
   color: white;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -66,9 +62,13 @@ button, .b-Button {
 }
 
 a {
-  color: var(--brand-color);
+  color: $brand_color;
 }
 
 img, svg {
   max-width: 100%;
+}
+
+svg * {
+  fill: currentColor;
 }
