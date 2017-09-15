@@ -79,7 +79,7 @@ const scripts = (done) => {
     })
     // .pipe(uglify())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(`${paths.dest}/assets`));
+    .pipe(gulp.dest(`${paths.dest}/assets/js`));
 }
 
 const watch = () => {
