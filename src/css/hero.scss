@@ -1,37 +1,56 @@
 @import "variables";
 #hero {
-  padding: 4rem $base_spacing 10rem;
   position: relative;
-  min-height: 60vh;
-  &:before {
-    content: '';
-    position: absolute;
-    background-color: white;
-    z-index: -1;
-    width: 75%;
-    height: 100%;
-    top: 0;
-    right: 50%;
-    transform: skew(-20deg);
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    background-image: url(/assets/img/flying-bird.jpg);
-    background-size: cover;
-    background-position: center right;
-    z-index: -2;
-    width: 75%;
-    height: 100%;
-    top: 0;
-    right: 0;
-  }
+  // padding: 4rem $base_spacing 10rem;
+
+  grid-template-rows: repeat(2, minmax(auto, 40vh));
   .logo {
+    grid-column: container-start;
+    grid-row: 1;
     font-weight: bold;
-    text-decoration: none;
-    color: currentColor;
+    margin: 0;
+    align-self: center;
+    font-size: calc(2vw + 1em);
+    a {
+      text-decoration: none;
+      color: currentColor;
+    }
   }
-  h1 {
-    width: 50%;
+  .cta {
+    grid-column-end: container-end;
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: end;
+    padding: 1em;
+    margin: 1em 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    background-color: hsla(0, 100%, 100%, 0.7);
+    transition: all 350ms;
+    &:hover {
+      background-color: white;
+    }
+    span {
+      @supports(grid-auto-rows: 1fr) {
+        display: block;
+      }
+    }
+  }
+  h2 {
+    grid-column: container-start;
+    grid-row: 2;
+    align-self: center;
+    font-size: calc(1.5vw + 0.8em);
+  }
+  img {
+    grid-column: divider-start / max-end;
+    grid-row: 1 / -1;
+    object-fit: cover;
+    object-position: center center;
+    z-index: -1;
+    height: 100%;
   }
 }

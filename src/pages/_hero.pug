@@ -1,9 +1,24 @@
+include /mixins/divider
+
 link(href="/assets/css/hero.css" rel="stylesheet")
 header#hero
-  //- .g-bgImg
-  a.logo(href="#") FLEDGE<br/>STUDIO
+  //- include /static/assets/img/fledge-logo.svg
+  //- img(src="/assets/img/fledge-logo.png", alt="")
+  h1.logo: a(href="#") FLEDGE<br/>STUDIO
   
-    //- include /static/assets/img/fledge-logo.svg
-    //- img(src="/assets/img/fledge-logo.png", alt="")
-  h1 Hassle-free websites for small businesses.
-  a.b-button(href="#contact") Contact us
+  h2 Hassle-free websites for small businesses.
+  img(src="/assets/img/birds.jpg", alt="")
+  a.cta(href="#contact")
+    span G
+    span e
+    span t
+    span &nbsp;
+    span s
+    span t
+    span a
+    span r
+    span t
+    span e
+    span d
+    span &#8615;
+  +divider()

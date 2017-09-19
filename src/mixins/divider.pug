@@ -1,0 +1,8 @@
+mixin divider({reverse} = {})
+  link(href="/assets/css/divider.css" rel="stylesheet")
+  .m-divider
+    svg(viewBox="0 0 100 100" preserveAspectRatio="none")
+      if reverse
+        polygon(points="0,0 100,100 100,0")
+      else
+        polygon(points="0,0 0,100 100,0")
