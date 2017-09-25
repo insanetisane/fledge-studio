@@ -12,15 +12,10 @@
 
 body {
   font-size: 2.2rem;
-  font-family: "HalisR", "Helvetica";
+  font-family: "Roboto", "Helvetica";
   font-weight: 300;
   color: $base_color;
   line-height: 1.4;
-  @supports(grid-template-areas: 'foo') {
-    display: grid;
-  }
-  grid-column-gap: 1em;
-  grid-template-columns: [max-start] minmax(0, 5vw) [container-start] 2fr [divider-start] minmax(0,80px) [mid] minmax(0,80px) [divider-end] 2fr [container-end] minmax(0, 5vw) [max-end];
   > header, > main {
     display: inherit;
     grid-template-columns: inherit;
@@ -41,8 +36,8 @@ main {
   }
 }
 
-h1, h2, h3, h4 {
-  font-weight: 400;
+h1 {
+  font-weight: 300;
 }
 
 p {

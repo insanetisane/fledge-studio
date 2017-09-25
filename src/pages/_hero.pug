@@ -2,16 +2,15 @@ include /mixins/divider
 
 link(href="/assets/css/hero.css" rel="stylesheet")
 header#hero
-  //- include /static/assets/img/fledge-logo.svg
-  //- img(src="/assets/img/fledge-logo.png", alt="")
-  h1.logo: a(href="#") FLEDGE<br/>STUDIO
+  a.logo(href="/")
+    include /static/assets/img/fledge-logo.svg
   
   .content
-    h2 Hassle-free websites for small businesses.
+    h1 We make cool websites for small businesses.
     if comingSoon
-      h3 Coming soon!
+      h2 coming&nbsp;soon&nbsp;&rsaquo;
 
   img(src="/assets/img/birds-sm.jpg" srcset="/assets/img/birds-sm.jpg 600w, /assets/img/birds-md.jpg 800w, /assets/img/birds.jpg 1400w" sizes="(max-width: 600px) 100vw, (min-width: 600px) 60vw, (min-width: 800px) 60vw" alt="")
   unless comingSoon
     a.cta(href="#contact") Get started &#8615;
-  +divider()
+  +divider({flipY: 1})

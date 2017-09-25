@@ -1,16 +1,24 @@
 @import "variables";
 #hero {
-  position: relative;
   // padding: 4rem $base_spacing 10rem;
-
+  display: grid;
+    @supports(grid-template-areas: 'foo') {
+    display: grid;
+  }
+  grid-template-columns: [max-start] minmax(10px, 5vw) [container-start] 2fr [divider-start] minmax(0,80px) [mid] minmax(0,80px) [divider-end] 2fr [container-end] minmax(10px, 5vw) [max-end];
   grid-template-rows: repeat(2, minmax(auto, 40vh));
   .logo {
+    color: white;
     grid-column: container-start;
     grid-row: 1;
     font-weight: bold;
     margin: 0;
-    align-self: center;
+    align-self: start;
+    justify-self: start;
     font-size: calc(2vw + 1em);
+    margin-top: 3.8vw;
+    margin-right: 10px;
+    min-width: 115px;
     a {
       text-decoration: none;
       color: currentColor;
@@ -40,17 +48,34 @@
     }
   }
   .content {
-    grid-column: container-start;
-    grid-row: 2;
-    align-self: center;
-    font-size: calc(1.5vw + 0.8em);
+    grid-column: divider-end;
+    grid-row-end: span 2;
+    padding: 2em;
+    // align-self: center;
+    font-size: calc(0.5vw + 0.8em);
+    // background-color: $light_grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    margin: 0;
+  }
+  h2 {
+    text-align: right;
+    color: $purple;
+    letter-spacing: 0.2em;
   }
   img {
-    grid-column: divider-start / max-end;
+    grid-column: max-start / divider-end;
     grid-row: 1 / -1;
     object-fit: cover;
     object-position: center;
     z-index: -1;
     height: 100%;
+  }
+  .m-divider {
+    // color: $light_grey;
   }
 }

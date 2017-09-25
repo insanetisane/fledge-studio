@@ -19,10 +19,11 @@ html(lang='en')
 
     block styles
       //- link(rel='stylesheet' href='/assets/style.css')
-      link(defer rel='stylesheet' href='/assets/css/normalize.css')
-      link(defer rel='stylesheet' href='/assets/css/fonts.css')
-      link(defer rel='stylesheet' href='/assets/css/base.css')
-      link(defer rel='stylesheet' href='/assets/css/global.css')
+      link(href='/assets/css/normalize.css' rel='stylesheet')
+      link(href='/assets/css/fonts.css' rel='stylesheet')
+      link(href='/assets/css/base.css' rel='stylesheet')
+      link(href='/assets/css/global.css' rel='stylesheet')
+      link(href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet")
     block head
   body(id=page)
     block body

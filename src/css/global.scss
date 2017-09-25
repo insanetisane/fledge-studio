@@ -11,3 +11,10 @@
 .g-Section_Content {
   grid-column: mid / container-end;
 }
+
+.g-Grid {
+  @supports(grid-template-areas: 'foo') {
+    display: grid;
+  }
+  grid-template-columns: [max-start] minmax(0, 5vw) [container-start] 2fr [divider-start] minmax(0,80px) [mid] minmax(0,80px) [divider-end] 2fr [container-end] minmax(0, 5vw) [max-end];
+}
