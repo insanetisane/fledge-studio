@@ -1,82 +1,57 @@
 @import "variables";
 #hero {
-  // padding: 4rem $base_spacing 10rem;
-  display: grid;
-    @supports(grid-template-areas: 'foo') {
-    display: grid;
-  }
-  grid-template-columns: [max-start] minmax(10px, 5vw) [container-start] 2fr [divider-start] minmax(0,80px) [mid] minmax(0,80px) [divider-end] 2fr [container-end] minmax(10px, 5vw) [max-end];
-  grid-template-rows: repeat(2, minmax(auto, 40vh));
   .logo {
-    color: white;
-    grid-column: container-start;
-    grid-row: 1;
-    font-weight: bold;
-    margin: 0;
-    align-self: start;
-    justify-self: start;
-    font-size: calc(2vw + 1em);
-    margin-top: 3.8vw;
-    margin-right: 10px;
-    min-width: 115px;
-    a {
-      text-decoration: none;
-      color: currentColor;
+    color: currentColor;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em 2em;
+  }
+  .content {
+    padding: 1em;
+  }
+  a {
+    text-decoration: none;
+  }
+  em {
+    position: relative;
+    font-style: normal;
+    &:before {
+      content: '';
+      background-color: $light_blue;
+      opacity: 0.5;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      transform: scaleX(1.1);
+    }
+  }
+  .hero_img {
+    position: relative;
+    img {
+      width: 100%;
+      display: block;
+    }
+    .m-divider {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: 30%;
+      transform: scaleY(-1);
+      box-shadow: 0 -1px 0 currentColor;
     }
   }
   .cta {
-    grid-column-end: container-end;
-    grid-row: 1 / span 2;
-    align-self: center;
-    justify-self: end;
-    padding: 1em;
-    margin: 1em 0;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.8em;
-    font-weight: bold;
-    background-color: hsla(0, 100%, 100%, 0.7);
-    transition: all 350ms;
-    &:hover {
-      background-color: white;
-    }
-    span {
-      @supports(grid-auto-rows: 1fr) {
-        display: block;
-      }
-    }
-  }
-  .content {
-    grid-column: divider-end;
-    grid-row-end: span 2;
-    padding: 2em;
-    // align-self: center;
-    font-size: calc(0.5vw + 0.8em);
-    // background-color: $light_grey;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  h1 {
-    margin: 0;
-  }
-  h2 {
     text-align: right;
-    color: $purple;
-    letter-spacing: 0.2em;
-    align-self: flex-end;
-  }
-  img {
-    grid-column: max-start / divider-end;
-    grid-row: 1 / -1;
-    object-fit: cover;
-    object-position: center left;
-    z-index: -1;
-    height: 100%;
-  }
-  .m-divider {
-    // color: $light_grey;
+    font-size: 1.3em;
+    font-weight: 600;
+    font-style: italic;
+    > a{
+      text-align: left;
+      display: inline-block;
+    }
   }
 }

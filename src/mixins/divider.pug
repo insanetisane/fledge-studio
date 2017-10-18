@@ -1,6 +1,6 @@
 mixin divider({flipX, flipY} = {})
-  link(href="/assets/css/divider.css" rel="stylesheet")
-  .m-divider
+  link(href="/assets/css/m-divider.css" rel="stylesheet")
+  .m-divider(class!=attributes.class)
     svg(viewBox="0 0 100 100" preserveAspectRatio="none")
       if flipX
         polygon(points="0,0 100,100 100,0")

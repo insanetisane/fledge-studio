@@ -1,5 +1,11 @@
 @import "variables";
 
+.g-container {
+  margin: 0 auto;
+  width: 60em;
+  max-width: calc(100% - 20px);
+}
+
 .g-bg-tint {
   background-color: $light_grey;
 }
@@ -8,11 +14,19 @@
   font-size: 1.5em;
 }
 
-.g-Section_Content {
+.g-text-brand {
+  color: $brand_color;
+}
+
+.g-section_content {
   grid-column: mid / container-end;
 }
 
-.g-Grid {
+.g-lspace {
+  letter-spacing: 0.1em;
+}
+
+.g-grid {
   @supports(grid-template-areas: 'foo') {
     display: grid;
   }

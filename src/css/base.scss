@@ -11,37 +11,23 @@
 }
 
 body {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: "Roboto", "Helvetica";
   font-weight: 300;
   color: $base_color;
   line-height: 1.4;
-  > header, > main {
-    display: inherit;
-    grid-template-columns: inherit;
-    grid-column-gap: inherit;
-    grid-column: max;
-  }
-  > footer {
-    grid-column: max;
-  }
 }
 
-main {
-  > section {
-    display: inherit;
-    grid-template-columns: inherit;
-    grid-column-gap: inherit;
-    grid-column: max;
-  }
+h1, h2, h3, h4, h5, h6, .b-heading {
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
-h1 {
+h1, .b-h1 {
   font-weight: 300;
 }
 
 p {
-  margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 
@@ -51,8 +37,17 @@ input:not([type=radio]) {
   font-family: inherit;
   font-weight: inherit;
 }
+
+figure {
+  margin: 0;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 [type=radio] {

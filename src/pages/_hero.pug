@@ -4,13 +4,15 @@ link(href="/assets/css/hero.css" rel="stylesheet")
 header#hero
   a.logo(href="/")
     include /static/assets/img/fledge-logo.svg
-  
+  .hero_img
+    img(src="/assets/img/birds-md.jpg" srcset="/assets/img/birds-md.jpg 504w, /assets/img/birds.jpg 1007w" sizes="(min-width: 600px) 60vw, 100vw" alt="")
+    +divider()
   .content
-    h1 We make effective websites for small businesses.
+    h1.g-lspace We handcraft <em>effective websites</em> for small businesses.
+    unless comingSoon
+      div.cta
+        a(href="#contact") get<br/>&nbsp; started &rsaquo;
+
     if comingSoon
       h2 coming&nbsp;soon.
 
-  img(src="/assets/img/birds-sm.jpg" srcset="/assets/img/birds-sm.jpg 600w, /assets/img/birds-md.jpg 800w, /assets/img/birds.jpg 1400w" sizes="(max-width: 600px) 100vw, (min-width: 600px) 60vw, (min-width: 800px) 60vw" alt="")
-  unless comingSoon
-    a.cta(href="#contact") Get started &#8615;
-  +divider({flipY: 1})
