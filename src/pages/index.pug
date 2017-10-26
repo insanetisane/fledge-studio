@@ -14,17 +14,21 @@ append head
   style
     //- include:sass /css/hero.scss
   
-append body
+//- append body
+
+append main
   include _hero
 
-//- append main
-  section
-    header
-      h2 How we help
-    .g-Section_Content
-      p Most small business owners we meet know they desperately need a website or to upgrade their current website, but they don’t know where to start, what platform to use, how to create their content and, most of all, when they will find the time to do it all. We get it.
-      p.g-Text-large We help small-business owners create websites that grab the attention of their ideal client. Our goal is to speed up the website creation process and take the stress out of it.
-      a.b-button(href="#contact") Contact us
+  section#who-we-are.g-accentWrap
+    .g-accentImg.g-accentImg-reverse
+    .g-accentContent
+      span.hey hey!
+      p We are Dillon and Rachel Headley, a husband and wife team based in Toronto.
+      p We design and develop effective and affordable websites for small businesses.
+
+      div.g-cta
+        a(href="#") learn more &gt;
+
 
   section
     header

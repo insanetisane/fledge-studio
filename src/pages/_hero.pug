@@ -1,17 +1,15 @@
 include /mixins/divider
 
 link(href="/assets/css/hero.css" rel="stylesheet")
-header#hero
+header#hero.g-accentWrap
   a.logo(href="/")
     include /static/assets/img/fledge-logo.svg
-  .hero_img
-    //- img(src="/assets/img/birds-md.jpg" srcset="/assets/img/birds-md.jpg 504w, /assets/img/birds.jpg 1007w" sizes="(min-width: 600px) 60vw, 100vw" alt="")
-    //- +divider()
-  .content
-    h1.g-lspace We handcraft <em>effective websites</em> for small businesses.
+  .g-accentImg
+  .g-accentContent
+    h1.g-lspace We handcraft <mark>effective websites</mark> for small businesses.
     unless comingSoon
-      div.cta
-        a(href="#contact") get<br/>&nbsp; started &rsaquo;
+      div.g-cta
+        a(href="#contact") get<br/>&nbsp; started &gt;
 
     if comingSoon
       h2 coming&nbsp;soon.

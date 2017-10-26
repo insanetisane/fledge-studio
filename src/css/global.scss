@@ -32,3 +32,77 @@
   }
   grid-template-columns: [max-start] minmax(0, 5vw) [container-start] 2fr [divider-start] minmax(0,80px) [mid] minmax(0,80px) [divider-end] 2fr [container-end] minmax(0, 5vw) [max-end];
 }
+
+.g-accentWrap {
+  position: relative;
+  @media (min-width: 40em) {
+    display: flex;
+  }
+}
+
+.g-accentImg {
+  position: relative;
+  background-image: url(/assets/img/birds-md.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 50%;
+  min-height: 40rem;
+  overflow: hidden;
+  @media (min-width: 40em) {
+    min-height: 0;
+    background-image: url(/assets/img/birds.jpg);
+  }  
+  &::after {
+    content: '';
+    display: block;
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 8em;
+    width: calc(100% + 2em);
+    transform-origin: top right;
+    transform: translate(0, 100%) rotate(10deg);
+    @media (min-width: 40em) {
+      top: 0;
+      bottom: auto;
+      width: 50vw;
+      height: calc(100% + 2em);
+      transform-origin: top left;
+      transform: translate(100%, 0) rotate(17deg);
+    }
+  }
+  &.g-accentImg-reverse {
+    order: 1;
+    &::after {
+      @media (min-width: 40em) {
+        right: auto;
+        left: 0;
+        transform-origin: top right;
+        transform: translate(-100%, 0) rotate(-17deg);
+      }
+    }
+  }
+}
+
+.g-accentContent {
+  padding: 1em;
+  @media (min-width: 40em) {
+    padding: 3em;
+    flex: 50%;
+    align-self: center;
+  }
+}
+
+.g-cta {
+  text-align: right;
+  font-size: 1.3em;
+  font-weight: 600;
+  font-style: italic;
+  > a {
+    text-align: left;
+    display: inline-block;
+    text-decoration: none;
+  }
+}
