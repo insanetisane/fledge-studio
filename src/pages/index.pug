@@ -17,14 +17,26 @@ append head
 //- append body
 
 append main
-  include _hero
+  //- link(href="/assets/css/hero.css" rel="stylesheet")
+  header#hero.g-accentWrap
+    a.logo(href="/")
+      include /static/assets/img/fledge-logo.svg
+    .g-accentImg
+    .g-accentContent
+      h1.g-lspace We handcraft <mark>effective websites</mark> for small businesses.
+      unless comingSoon
+        div.g-cta
+          a(href="#contact") get started &gt;
+
+      if comingSoon
+        h2 coming&nbsp;soon.
 
   section#who-we-are.g-accentWrap
     .g-accentImg.g-accentImg-reverse
     .g-accentContent
-      span.hey hey!
+      span.hey hello!
       p We are Dillon and Rachel Headley, a husband and wife team based in Toronto.
-      p We design and develop effective and affordable websites for small businesses.
+      p We help people design and build a website that makes it easy for them to get hired.
 
       div.g-cta
         a(href="#") learn more &gt;

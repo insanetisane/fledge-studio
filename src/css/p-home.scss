@@ -14,27 +14,10 @@
         z-index: 1;
       }
     }
-    h1 {
-      padding-top: 10vw;
-      font-size: calc(1.1em + 2.1vw);
-    }
     mark {
       position: relative;
       font-style: normal;
       background-color: fade-out($light_blue, 0.5);
-      // &:before {
-      //   content: '';
-      //   background-color: $light_blue;
-      //   opacity: 0.5;
-      //   display: inline-block;
-      //   position: absolute;
-      //   top: 0;
-      //   left: 0;
-      //   right: 0;
-      //   bottom: 0;
-      //   z-index: -1;
-      //   transform: scaleX(1.1);
-      // }
     }
     .g-accentImg {
       background-image: url(/assets/img/birds-md.jpg);
@@ -42,23 +25,29 @@
         background-image: url(/assets/img/birds.jpg);
       }
     }
+    .g-accentContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
+
   #who-we-are {
     .g-accentImg {
       background-image: url(/assets/img/dillon-and-rachel.jpg);
       background-position: center calc(50%);
     }
     .hey {
-      font-size: 15vw;
+      font-size: 12vw;
       font-weight: bold;
       color: $green;
       opacity: 0.5;
-      display: block;
-      height: 0.9em;
+      display: block;;
+      // height: 1em;
     }
     p {
       @media (min-width: 40em) {
-        font-size: calc(1rem + 2vw);
+        font-size: 3rem;
         transform: translateX(4vw);
       }
     }
