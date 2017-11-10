@@ -1,108 +1,135 @@
-@import "variables";
+@font-face {
+    font-family: 'HalisR';
+    src: url('/assets/fonts/HalisR-Black-webfont.woff2') format('woff2'),
+         url('/assets/fonts/HalisR-Black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HalisR';
+    src: url('/assets/fonts/HalisR-Medium-webfont.woff2') format('woff2'),
+         url('/assets/fonts/HalisR-Medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HalisR';
+    src: url('/assets/fonts/HalisR-ExtraLight-webfont.woff2') format('woff2'),
+         url('/assets/fonts/HalisR-ExtraLight-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HalisR';
+    src: url('/assets/fonts/HalisR-Book-webfont.woff2') format('woff2'),
+         url('/assets/fonts/HalisR-Book-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HalisR';
+    src: url('/assets/fonts/HalisR-Thin-webfont.woff2') format('woff2'),
+         url('/assets/fonts/HalisR-Thin-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Base */
+:root {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Roboto", "Helvetica";
+  font-weight: 300;
+  // color: $base_color;
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6, .g-heading {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+h1, .g-h1 {
+  font-weight: 300;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+input:not([type=radio]) {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+figure {
+  margin: 0;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+[type=radio] {
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+button, .g-button {
+  // background-color: $brand_color;
+  // border: 1px solid $brand_color;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 1em 2em;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+}
+
+a {
+  // color: $brand_color;
+}
+
+img, svg {
+  max-width: 100%;
+}
+
+svg * {
+  fill: currentColor;
+}
 
 .g-container {
   margin: 0 auto;
   width: 60em;
   max-width: calc(100% - 20px);
-}
-
-.g-bg-tint {
-  background-color: $light_grey;
-}
-
-.g-text-large {
-  font-size: 1.5em;
-}
-
-.g-text-brand {
-  color: $brand_color;
-}
-
-.g-section_content {
-  grid-column: mid / container-end;
-}
-
-.g-lspace {
-  letter-spacing: 0.1em;
-}
-
-.g-grid {
-  @supports(grid-template-areas: 'foo') {
-    display: grid;
-  }
-  grid-template-columns: [max-start] minmax(0, 5vw) [container-start] 2fr [divider-start] minmax(0,80px) [mid] minmax(0,80px) [divider-end] 2fr [container-end] minmax(0, 5vw) [max-end];
-}
-
-.g-accentWrap {
-  position: relative;
-  @media (min-width: 40em) {
-    display: flex;
-  }
-}
-
-.g-accentImg {
-  position: relative;
-  background-image: url(/assets/img/birds-md.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  flex: 50%;
-  min-height: 40rem;
-  overflow: hidden;
-  @media (min-width: 40em) {
-    min-height: 0;
-    background-image: url(/assets/img/birds.jpg);
-  }  
-  &::after {
-    content: '';
-    display: block;
-    background-color: white;
-    z-index: 1;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 8em;
-    width: calc(100% + 2em);
-    transform-origin: top right;
-    transform: translate(0, 100%) rotate(10deg);
-    @media (min-width: 40em) {
-      top: 0;
-      bottom: auto;
-      width: 50vw;
-      height: calc(100% + 2em);
-      transform-origin: top left;
-      transform: translate(100%, 0) rotate(17deg);
-    }
-  }
-  &.g-accentImg-reverse {
-    order: 1;
-    &::after {
-      @media (min-width: 40em) {
-        right: auto;
-        left: 0;
-        transform-origin: top right;
-        transform: translate(-100%, 0) rotate(-17deg);
-      }
-    }
-  }
-}
-
-.g-accentContent {
-  padding: 2rem;
-  @media (min-width: 40em) {
-    padding: 8rem;
-    flex: 50%;
-    align-self: center;
-  }
-}
-
-.g-cta {
-  text-align: right;
-  font-size: 1.3em;
-  font-weight: 600;
-  font-style: italic;
-  > a {
-    text-align: left;
-    display: inline-block;
-    text-decoration: none;
-  }
 }

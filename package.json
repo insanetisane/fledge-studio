@@ -1,38 +1,35 @@
 {
-  "name": "Rogers_CSR",
+  "name": "Fledegling",
   "version": "1.0.0",
-  "description": "",
-  "main": "bs-config.js",
-  "dependencies": {
-    "autoprefixer": "^7.1.2",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.6.0",
-    "babel-register": "^6.24.1",
-    "browser-sync": "^2.18.13",
-    "del": "^3.0.0",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-babel": "^7.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-pug": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-util": "^3.0.8",
-    "jstransformer-sass": "^0.1.1"
-  },
+  "description": "A simple, modern, progressivly enhanceable, static site generator using npm scripts and pug.",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "postclean": "mkdir -p dist/assets/{css,js}",
+    "prebuild": "npm run clean",
+    "build": "npx npm-run-all -p build:*",
+    "build:html": "npx pug -b src src/pages -o dist",
+    "build:css": "npx node-sass src/css -o dist/assets/css",
+    "build:js": "cp -R src/js/ dist/assets/js",
+    "build:static": "cp -R src/static/ dist",
+    "watch": "npx npm-run-all -p watch:*",
+    "watch:html": "npx pug -w -b src src/pages -o dist",
+    "watch:css": "npx gaze 'node-sass $path -o dist/assets/css/' 'src/**/*.{css,scss}'",
+    "watch:js": "npx gaze 'cp $path dist/assets/js' 'src/**/*.js'",
+    "watch:static": "npx gaze 'cp $path dist' 'src/static/**/*'",
+    "images": "npx -p sharp-cli sharp -i src/static/assets/img/* -o dist/assets/img -q90 -- resize 800 --optimise --nearLossless",
+    "serve": "npx browser-sync start --no-open --no-ui --no-notify -s dist -f dist",
+    "start": "npx npm-run-all -p build watch serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 10"
-  ],
-  "babel": {
-    "presets": [
-      "env"
-    ]
-  }
+  "devDependencies": {
+    "gaze-cli": "^0.2.0",
+    "node-sass": "^4.6.0",
+    "npm-run-all": "^4.1.2",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "dependencies": {}
 }

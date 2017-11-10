@@ -1,6 +1,6 @@
 block settings
   -
-    title = "Simple Starter"
+    title = "Fledge Studio"
     description = "A simple modular base with Pug Sass and Babel"
     page = ''
 
@@ -18,9 +18,7 @@ html(lang='en')
       meta(name="description" content="#{description}")
 
     block styles
-      link(href='/assets/css/normalize.css' rel='stylesheet')
-      link(href='/assets/css/fonts.css' rel='stylesheet')
-      link(href='/assets/css/base.css' rel='stylesheet')
+      link(href='/assets/css/reboot.css' rel='stylesheet')
       link(href='/assets/css/global.css' rel='stylesheet')
       link(href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet")
     block head
@@ -31,7 +29,7 @@ html(lang='en')
       block main
 
     block footer
-      include _footer
+      include /components/footer
     block scripts
       script(src='/assets/js/app.js')
       //- script.

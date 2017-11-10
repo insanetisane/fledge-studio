@@ -1,6 +1,6 @@
-extends _layout.pug
+extends /layouts/layout.pug
 
-include /mixins/hello-world.pug
+include /components/hello-world.pug
 
 append settings
   -
@@ -11,46 +11,38 @@ append settings
 append head
   link(rel="prefetch" href="/assets/img/fledge-logo.png" as="image")
   link(rel="stylesheet" href="/assets/css/p-home.css")
-  style
-    //- include:sass /css/hero.scss
+  //- style
+    include:sass /css/hero.scss
   
 //- append body
 
 append main
   //- link(href="/assets/css/hero.css" rel="stylesheet")
-  header#hero.g-accentWrap
+  header#hero
     a.logo(href="/")
       include /static/assets/img/fledge-logo.svg
-    .g-accentImg
-    .g-accentContent
-      h1.g-lspace We handcraft <mark>effective websites</mark> for small businesses.
-      unless comingSoon
-        div.g-cta
-          a(href="#contact") get started &gt;
+    h1 We handcraft effective websites for small businesses.
+    a(href="#") get started &gt;
 
-      if comingSoon
-        h2 coming&nbsp;soon.
+  section#about-us
+    span.hey Hi there,
+    p It’s nice to meet you.
+    p We are a husband and wife team and co-founders of Fledge Studio, a web design and development studio based in Toronto.
+    p We love helping other small business owners succeed online.
+    a(href="#") more about us &gt;
+    img(src="/assets/img/dillon-and-rachel-hug.jpg")
 
-  section#who-we-are.g-accentWrap
-    .g-accentImg.g-accentImg-reverse
-    .g-accentContent
-      span.hey hello!
-      p We are Dillon and Rachel Headley, a husband and wife team based in Toronto.
-      p We help people design and build a website that makes it easy for them to get hired.
+  section#packages
+    h2 our packages
 
-      div.g-cta
-        a(href="#") learn more &gt;
+    div
+      h3 1 | One page website
+      p A simple website designed to describe your services and connect you with people who want to hire you.
+      ul.features
+        li consultation &amp; recommendations
+        li fast, secure &amp; responsive one page website
+        li simple contact form
+        li 4 week engagement
+      span $1000
 
-
-  section
-    header
-      h2 Who we are
-    .g-Section_Content
-      p We are Dillon and Rachel Headley, a husband and wife team based in Toronto, Canada.
-      p Dillon is a senior web developer with five years experience building small and large websites and web applications both as a freelancer and for agencies.  He has
-      p Rachel is an experienced administrative professional and project manager.  She excels at listening to and communicating with clients, understanding their needs and helping them create effective content and designs.
-      p.g-Text-large Together we are passionate about helping small-businesses succeed.
-      a.b-button(href="#contact") Contact us
-
-  include _recent-work
-  include _contact
+  include /components/contact
