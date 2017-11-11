@@ -1,27 +1,24 @@
-section#contact.g-bg-tint
-  header
-    h2 Contact Us
-  .g-Section_Content
-    p Ready to get that website launched?  Get in touch and let us know a bit about your business and needs and we will be in touch within 24 hours.
-    form(netlify, name="contact")
-      label Name
-        input(type="text", name="name" required)
-      label Email Address
-        input(type="email", name="email" required)
-      label Business Name
-        input(type="text", name="business-name")
-      label Current Website
-        input(type="url", name="website")
-      fieldgroup
-        label
-          input(type="radio", name="needed")
-          | New website
-        label
-          input(type="radio", name="needed")
-          | Website redesign
-        label
-          input(type="radio", name="needed")
-          | Other
-      label Message
-        textarea(name="message") 
-      button(type="submit") Submit
+section#contact
+  h2 contact us
+  p Whether you’re ready to get started, need more information or just want to say hi, fill in this contact form and we’ll be in touch within 24 hours.
+  form(netlify, name="contact")
+    label Name*
+      input(type="text", name="name" required)
+    label Email Address*
+      input(type="email", name="email" required)
+    label Current Website
+      input(type="url", name="website")
+    fieldset
+      legend I'm interested in...
+      label
+        input(type="radio", value="1" name="package")
+        | package 1
+      label
+        input(type="radio", value="2" name="package")
+        | package 2
+      label
+        input(type="radio", value="3" name="package")
+        | package 3
+    label Message
+      textarea(name="message") 
+    button send

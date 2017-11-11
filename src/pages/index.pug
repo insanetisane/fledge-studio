@@ -8,8 +8,8 @@ append settings
     description = "Hassle-free websites for small businesses."
     page = 'p-home'
   
-append head
-  link(rel="prefetch" href="/assets/img/fledge-logo.png" as="image")
+append styles
+  link(rel="prefetch" href="/assets/img/logo.png" as="image")
   link(rel="stylesheet" href="/assets/css/p-home.css")
   //- style
     include:sass /css/hero.scss
@@ -17,20 +17,17 @@ append head
 //- append body
 
 append main
-  //- link(href="/assets/css/hero.css" rel="stylesheet")
   header#hero
-    a.logo(href="/")
-      include /static/assets/img/fledge-logo.svg
-    h1 We handcraft effective websites for small businesses.
-    a(href="#") get started &gt;
+    h1.g-bg-primary-fade We handcraft effective and affordable websites.
+    a.g-cta(href="#") get started &gt;
 
   section#about-us
-    span.hey Hi there,
+    h2.g-text-primary-fade hello!
     p It’s nice to meet you.
     p We are a husband and wife team and co-founders of Fledge Studio, a web design and development studio based in Toronto.
-    p We love helping other small business owners succeed online.
-    a(href="#") more about us &gt;
-    img(src="/assets/img/dillon-and-rachel-hug.jpg")
+    p.g-inverse Our goal is to help other small business owners create a website that gets them hired.
+    a.g-bg-secondary-fade.g-text-default.g-cta(href="#") more about us &gt;
+    img(src="/assets/img/dillon-and-rachel.jpg")
 
   section#packages
     h2 our packages
@@ -44,5 +41,30 @@ append main
         li simple contact form
         li 4 week engagement
       span $1000
+
+    div
+      h3 2 | Multi page website
+      p For businesses that want to give their potential clients an in depth look at their team, processes or services. Or for creators with a portfolio to share.
+      ul.features
+        li consultation &amp; recommendations
+        li fast, secure &amp; responsive one page website
+        li contact form and / or portfolio included
+        li 6 week engagement
+      span $2000
+
+    div
+      h3 3 | Content manamgement system
+      p A multi-page website that gives you and your team the ability to edit all the images, text and pages on the site.
+      ul.features
+        li consultation &amp; recommendations
+        li fast, secure &amp; responsive one page website
+        li contact form and / or portfolio included
+        li built in blog or news feed
+        li design integrated with content management system
+        li 8 week engagement
+      span $5000
+
+  section#cta
+    p.g-text-primary Ready to work together? Fill in the contact form below and #[a(href="#"): strong let’s get started &gt;]
 
   include /components/contact

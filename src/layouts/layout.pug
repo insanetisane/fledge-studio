@@ -20,10 +20,13 @@ html(lang='en')
     block styles
       link(href='/assets/css/reboot.css' rel='stylesheet')
       link(href='/assets/css/global.css' rel='stylesheet')
-      link(href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet")
+      link(href="https://fonts.googleapis.com/css?family=Roboto:300,500,800" rel="stylesheet")
     block head
   body(id=page)
     block body
+    header#header
+      a.g-logo(href="/")
+        include /static/assets/img/logo.svg
 
     main
       block main

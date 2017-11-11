@@ -40,34 +40,51 @@
 
 /* Base */
 :root {
+  --theme-text: #333;
+  --theme-primary: #DB7070;
+  --theme-primary-fade: rgba(253,244,240, 0.7);
+  --theme-secondary: #ADD9F4; 
+  --theme-secondary-fade: rgba(173,217,244,0.2);
+  --theme-font-title: "Roboto", "Helvetica";
+  --theme-font-body: "Roboto", "Helvetica";
+  --theme-space-default: 3rem;
+  --theme-space-large: 8rem;
   font-size: 62.5%;
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 body {
   font-size: 2rem;
-  font-family: "Roboto", "Helvetica";
+  font-family: var(--theme-font-body);
   font-weight: 300;
   // color: $base_color;
   line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6, .g-heading {
-  margin-top: 0;
-  margin-bottom: 1em;
+  font-family: var(--theme-font-title);
 }
 
 h1, .g-h1 {
   font-weight: 300;
+  font-size: 3rem;
+}
+h2, .g-h2 {
+  font-weight: 300;
+  font-size: 5rem;
+}
+
+a {
+  color: var(--theme-primary);
 }
 
 p {
   margin-top: 0;
   margin-bottom: 1em;
+}
+
+legend {
+  font-size: inherit;
 }
 
 input:not([type=radio]) {
@@ -79,10 +96,10 @@ input:not([type=radio]) {
 
 figure {
   margin: 0;
-  img {
-    width: 100%;
-    display: block;
-  }
+}
+figure img {
+  width: 100%;
+  display: block;
 }
 
 img {
@@ -124,7 +141,7 @@ img, svg {
   max-width: 100%;
 }
 
-svg * {
+.g-svg-fill * {
   fill: currentColor;
 }
 
@@ -132,4 +149,48 @@ svg * {
   margin: 0 auto;
   width: 60em;
   max-width: calc(100% - 20px);
+}
+
+.g-text-default {
+  color: var(--theme-text);
+}
+.g-text-primary {
+  color: var(--theme-primary);
+}
+.g-text-primary-fade {
+  color: var(--theme-primary-fade);
+}
+.g-text-secondary {
+  color: var(--theme-secondary);
+}
+
+.g-bg-primary {
+  background-color: var(--theme-primary);
+}
+.g-bg-primary-fade {
+  background-color: var(--theme-primary-fade);
+}
+.g-bg-secondary {
+  background-color: var(--theme-secondary);
+}
+.g-bg-secondary-fade {
+  background-color: var(--theme-secondary-fade);
+}
+.g-inverse {
+  background-color: var(--theme-text);
+  color: white;
+}
+
+.g-logo {
+  display: inline-block;
+  width: 8.5rem;
+}
+.g-logo svg {
+  width: 100%;
+}
+
+.g-cta {
+  font-weight: bold;
+  font-style: italic;
+  transition: all 100ms;
 }
