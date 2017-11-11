@@ -1,0 +1,32 @@
+#about-us {
+  max-width: 76.8rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--theme-space-default);
+  padding-right: var(--theme-space-default);
+  background-image: url(/assets/img/dillon-and-rachel.jpg);
+  background-size: 42rem;
+  background-repeat: no-repeat;
+  display: flex;
+}
+#about-us h2 {
+  text-align: right;
+  margin-right: var(--theme-space-large);
+}
+#about-us p {
+  padding: 0 var(--theme-space-default);
+}
+#about-us .content {
+  flex: 0 1 40rem;
+  margin-left: auto;
+}
+#about-us .goal {
+  padding-top: var(--theme-space-default);
+  padding-bottom: var(--theme-space-default);
+  margin-bottom: 0;
+}
+#about-us .g-cta {
+  padding: 1rem 2rem;
+  transform: translate(2rem, -1rem);
+  display: inline-block;
+}

@@ -10,25 +10,28 @@ append settings
   
 append styles
   link(rel="prefetch" href="/assets/img/logo.png" as="image")
-  link(rel="stylesheet" href="/assets/css/p-home.css")
+  link(rel="stylesheet" href="/assets/css/home-hero.css")
   //- style
-    include:sass /css/hero.scss
+    include:sass /css/home-hero.scss
   
 //- append body
 
 append main
-  header#hero
+  header#home-hero
     h1.g-bg-primary-fade We handcraft effective and affordable websites.
     a.g-cta(href="#") get started &gt;
 
+  link(rel="stylesheet" href="/assets/css/about-us.css")
   section#about-us
-    h2.g-text-primary-fade hello!
-    p It’s nice to meet you.
-    p We are a husband and wife team and co-founders of Fledge Studio, a web design and development studio based in Toronto.
-    p.g-inverse Our goal is to help other small business owners create a website that gets them hired.
-    a.g-bg-secondary-fade.g-text-default.g-cta(href="#") more about us &gt;
-    img(src="/assets/img/dillon-and-rachel.jpg")
+    .content
+      h2.g-text-primary-fade hello!
+      p It’s nice to meet you.
+      p We are a husband and wife team and co-founders of Fledge Studio, a web design and development studio based in Toronto.
+      p.g-inverse.goal Our goal is to help other small business owners create a website that gets them hired.
+      div.g-text-right
+        a.g-bg-secondary-fade.g-text-default.g-cta(href="#") more about us &gt;
 
+  link(rel="stylesheet" href="/assets/css/packages.css")
   section#packages
     h2 our packages
 

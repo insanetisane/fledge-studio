@@ -49,15 +49,22 @@
   --theme-font-body: "Roboto", "Helvetica";
   --theme-space-default: 3rem;
   --theme-space-large: 8rem;
-  font-size: 62.5%;
+  --root-font-size: 62.5%;
+  --theme-font-size: 2rem;
+  font-size: var(--root-font-size);
   box-sizing: border-box;
 }
 
+@media(min-width: 75em) {
+  :root {
+    --root-font-size: calc(62.5% + 0.1vw);
+  }
+}
+
 body {
-  font-size: 2rem;
+  font-size: var(--theme-font-size);
   font-family: var(--theme-font-body);
   font-weight: 300;
-  // color: $base_color;
   line-height: 1.4;
 }
 
@@ -150,7 +157,9 @@ img, svg {
   width: 60em;
   max-width: calc(100% - 20px);
 }
-
+.g-text-right {
+  text-align: right;
+}
 .g-text-default {
   color: var(--theme-text);
 }
@@ -184,6 +193,7 @@ img, svg {
 .g-logo {
   display: inline-block;
   width: 8.5rem;
+  margin: 2rem 0 0 2rem;
 }
 .g-logo svg {
   width: 100%;
@@ -191,6 +201,6 @@ img, svg {
 
 .g-cta {
   font-weight: bold;
-  font-style: italic;
+  /*font-style: italic;*/
   transition: all 100ms;
 }

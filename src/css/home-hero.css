@@ -1,0 +1,22 @@
+#home-hero {
+  background-image: url(/assets/img/birds.jpg);
+  background-position: right 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 26rem;
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#home-hero h1 {
+  max-width: 21ch;
+  padding: 1rem;
+}
+#home-hero .g-cta {
+  margin-left: 10rem;
+  align-self: flex-start;
+}
