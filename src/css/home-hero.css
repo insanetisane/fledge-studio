@@ -1,22 +1,24 @@
 #home-hero {
+  justify-self: start;
   background-image: url(/assets/img/birds.jpg);
   background-position: right 100%;
   background-size: contain;
   background-repeat: no-repeat;
   min-height: 26rem;
-  max-width: 70rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
+  /* max-width: 70rem; */
+  margin: 0 5rem 0 var(--theme-space-default);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+#home-hero .content {
+  margin-right: 4rem;
+  flex: 0 1 35rem;
+
 }
 #home-hero h1 {
-  max-width: 21ch;
+  /* max-width: 21ch; */
   padding: 1rem;
 }
 #home-hero .g-cta {
   margin-left: 10rem;
-  align-self: flex-start;
 }

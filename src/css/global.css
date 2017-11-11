@@ -45,6 +45,7 @@
   --theme-primary-fade: rgba(253,244,240, 0.7);
   --theme-secondary: #ADD9F4; 
   --theme-secondary-fade: rgba(173,217,244,0.2);
+  --theme-neutral: lightgrey;
   --theme-font-title: "Roboto", "Helvetica";
   --theme-font-body: "Roboto", "Helvetica";
   --theme-space-default: 3rem;
@@ -68,6 +69,19 @@ body {
   line-height: 1.4;
 }
 
+@supports(grid-auto-rows: 1fr) {
+  main {
+    display: grid;
+  }
+}
+main {
+  grid-template-columns: 1fr [content-start] minmax(0, 120rem) [content-end] 1fr;
+  justify-items: center;
+}
+main > * {
+  grid-column: content;
+}
+
 h1, h2, h3, h4, h5, h6, .g-heading {
   font-family: var(--theme-font-title);
 }
@@ -79,6 +93,7 @@ h1, .g-h1 {
 h2, .g-h2 {
   font-weight: 300;
   font-size: 5rem;
+  line-height: 1;
 }
 
 a {
@@ -129,8 +144,8 @@ label {
 }
 
 button, .g-button {
-  // background-color: $brand_color;
-  // border: 1px solid $brand_color;
+  background-color: var(--theme-neutral);
+  border: 1px solid var(--theme-neutral);
   color: white;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -138,10 +153,6 @@ button, .g-button {
   font-weight: bold;
   display: inline-block;
   text-decoration: none;
-}
-
-a {
-  // color: $brand_color;
 }
 
 img, svg {

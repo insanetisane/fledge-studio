@@ -9,17 +9,19 @@ append settings
     page = 'p-home'
   
 append styles
-  link(rel="prefetch" href="/assets/img/logo.png" as="image")
-  link(rel="stylesheet" href="/assets/css/home-hero.css")
-  //- style
-    include:sass /css/home-hero.scss
+  //- link(rel="prefetch" href="/assets/img/birds.jpg" as="image")
+  //- link(rel="prefetch" href="/assets/img/dillon-and-rachel.jpg" as="image")
+  //- link(rel="stylesheet" href="/assets/css/home-hero.css")
+  style
+    include /css/home-hero.css
   
 //- append body
 
 append main
   header#home-hero
-    h1.g-bg-primary-fade We handcraft effective and affordable websites.
-    a.g-cta(href="#") get started &gt;
+    .content
+      h1.g-bg-primary-fade We handcraft effective and affordable websites.
+      a.g-cta(href="#") get started &gt;
 
   link(rel="stylesheet" href="/assets/css/about-us.css")
   section#about-us
@@ -34,7 +36,6 @@ append main
   link(rel="stylesheet" href="/assets/css/packages.css")
   section#packages
     h2 our packages
-
     div
       h3 1 | One page website
       p A simple website designed to describe your services and connect you with people who want to hire you.
