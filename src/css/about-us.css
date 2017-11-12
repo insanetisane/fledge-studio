@@ -3,10 +3,18 @@
   margin-top: var(--theme-space-default);
   padding-right: var(--theme-space-default);
   background-image: url(/assets/img/dillon-and-rachel.jpg);
-  background-size: 42rem;
+  background-size: calc(20rem + 30vw);
   background-repeat: no-repeat;
   display: flex;
+  padding-top: calc(25rem - 5vw);
 }
+@media (min-width: 47.5em) {
+  #about-us {
+    background-size: 42rem;
+    padding-top: 0;
+  }
+}
+
 #about-us h2 {
   text-align: right;
   margin-right: var(--theme-space-large);

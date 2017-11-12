@@ -75,6 +75,7 @@ body {
   }
 }
 main {
+  overflow: hidden;
   grid-template-columns: 1fr [content-start] minmax(0, 120rem) [content-end] 1fr;
   justify-items: center;
 }
@@ -108,6 +109,10 @@ a {
 p {
   margin-top: 0;
   margin-bottom: 1em;
+}
+
+ul {
+  padding-left: 2rem;
 }
 
 legend {
