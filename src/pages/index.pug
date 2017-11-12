@@ -5,12 +5,13 @@ include /components/hello-world.pug
 append settings
   -
     title = "Fledge Studio"
-    description = "Hassle-free websites for small businesses."
+    description = "Handcrafted, effective, and affordable websites."
     page = 'p-home'
   
 append styles
-  //- link(rel="prefetch" href="/assets/img/birds.jpg" as="image")
+  //- link(rel="prefetch" href="/assets/img/birds-flying.jpg" as="image")
   //- link(rel="prefetch" href="/assets/img/dillon-and-rachel.jpg" as="image")
+  //- link(rel="prefetch" href="/assets/img/working-together.jpg" as="image")
   //- link(rel="stylesheet" href="/assets/css/home-hero.css")
   style
     include /css/home-hero.css
@@ -23,7 +24,7 @@ append main
       h1.g-bg-primary-fade We handcraft effective and affordable websites.
       a.g-cta(href="#") get started &gt;
 
-  link(rel="stylesheet" href="/assets/css/about-us.css")
+  +loadCss("/assets/css/about-us.css")
   section#about-us
     .content
       h2.g-text-primary hello!
@@ -33,7 +34,7 @@ append main
       div.g-text-right
         a.g-bg-secondary-fade.g-text-default.g-cta(href="#") more about us &gt;
 
-  link(rel="stylesheet" href="/assets/css/packages.css")
+  +loadCss("/assets/css/packages.css")
   section#packages
     h2 our packages
     div.package
