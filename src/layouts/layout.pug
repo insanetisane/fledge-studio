@@ -32,8 +32,9 @@ html(lang='en')
   body(id=page)
     block body
     header#header
-      a.g-logo(href="/")
-        include /static/assets/img/logo.svg
+      nav
+        a.g-logo(href="/")
+          include /static/assets/img/logo.svg
 
     main
       block main

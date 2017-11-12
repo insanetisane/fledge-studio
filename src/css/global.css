@@ -56,7 +56,7 @@
   box-sizing: border-box;
 }
 
-@media(min-width: 75em) {
+@media(min-width: 62.5em) {
   :root {
     --root-font-size: calc(62.5% + 0.2vw);
   }
@@ -76,7 +76,7 @@ body {
 }
 main {
   overflow: hidden;
-  grid-template-columns: 1fr [content-start] minmax(0, 120rem) [content-end] 1fr;
+  grid-template-columns: 1fr [content-start] minmax(0, 100rem) [content-end] 1fr;
   justify-items: center;
 }
 main > * {
@@ -227,4 +227,9 @@ img, svg {
   font-weight: bold;
   /*font-style: italic;*/
   transition: all 100ms;
+}
+
+#header {
+  max-width: 80rem;
+  margin: 0 auto;
 }

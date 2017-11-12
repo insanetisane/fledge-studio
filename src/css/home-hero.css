@@ -1,5 +1,4 @@
 #home-hero {
-  justify-self: start;
   background-image: url(/assets/img/birds-flying.jpg);
   background-repeat: no-repeat;
   min-height: 25rem;
@@ -7,12 +6,12 @@
   margin: 0 5rem 0 var(--theme-space-default);
   display: flex;
   align-items: flex-end;
-  
   background-size: 60vw;
   background-position: right top;
   padding-top: 20vw;
+  /* justify-self: start; */
 }
-@media (min-width: 760px) {
+@media (min-width: 47.5em) {
   #home-hero {
     background-size: contain;
     background-position: right 100%;
