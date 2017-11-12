@@ -1,0 +1,12 @@
+#cta-section {
+  background-image: url(/assets/img/working-together.jpg);
+  background-size: cover;
+  height: 52vw;
+  max-height: 62rem;
+  width: 100%;
+}
+#cta-section p {
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 32rem;
+}

@@ -2,7 +2,7 @@
   justify-self: start;
   background-image: url(/assets/img/birds-flying.jpg);
   background-repeat: no-repeat;
-  min-height: 26rem;
+  min-height: 25rem;
   max-width: 70rem;
   margin: 0 5rem 0 var(--theme-space-default);
   display: flex;

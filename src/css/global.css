@@ -194,6 +194,9 @@ img, svg {
   color: var(--theme-secondary);
 }
 
+.g-bg-white {
+  background-color: white;
+}
 .g-bg-primary {
   background-color: var(--theme-primary);
 }
