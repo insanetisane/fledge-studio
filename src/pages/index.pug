@@ -12,19 +12,20 @@ append styles
   //- link(rel="prefetch" href="/assets/img/birds-flying.jpg" as="image")
   //- link(rel="prefetch" href="/assets/img/dillon-and-rachel.jpg" as="image")
   //- link(rel="prefetch" href="/assets/img/working-together.jpg" as="image")
-  //- link(rel="stylesheet" href="/assets/css/home-hero.css")
   style
     include /css/home-hero.css
+    include /css/about-us.css
   
 //- append body
 
 append main
+  //- +loadCss("/assets/css/home-hero.css")
   header#home-hero
     .content
       h1.g-bg-primary-fade We handcraft effective and affordable websites.
       a.g-cta(href="#") get started &gt;
 
-  +loadCss("/assets/css/about-us.css")
+  //- +loadCss("/assets/css/about-us.css")
   section#about-us
     .content
       h2.g-text-primary hello!

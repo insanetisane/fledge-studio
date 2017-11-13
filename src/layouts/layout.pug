@@ -1,4 +1,4 @@
-include /components/loadCSS
+include /components/utils
 block settings
   -
     title = "Fledge Studio"
@@ -42,7 +42,7 @@ html(lang='en')
     block footer
       include /components/footer
     block scripts
-      script(src='/assets/js/app.js')
+      script(src='/assets/js/app.js' defer)
       //- script.
         if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('service-worker.js', {
