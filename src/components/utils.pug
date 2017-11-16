@@ -1,5 +1,6 @@
 mixin loadCss(path)
-  link(rel="preload" href=path as="style" onload="this.rel='stylesheet'")
+  link(rel="preload" href=path as="style" onload="this.rel='stylesheet'") 
+  <script> </script>
   noscript:link(rel="stylesheet" href=path)
   //- to test normal stylesheets:
   //- link(rel="stylesheet" href=path as="style")

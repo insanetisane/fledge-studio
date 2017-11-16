@@ -25,7 +25,7 @@
 body {
   font-size: var(--theme-font-size);
   font-family: var(--theme-font-body);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.4;
 }
 
@@ -36,7 +36,7 @@ body {
 }
 main {
   overflow: hidden;
-  grid-template-columns: 1fr [content-start] minmax(0, 100rem) [content-end] 1fr;
+  grid-template-columns: [full-start] 1fr [content-start] minmax(0, 100rem) [content-end] 1fr [full-end];
   justify-items: center;
 }
 main > * {

@@ -1,24 +1,26 @@
++loadCss('/assets/css/contact.css')
 section#contact
   h2 contact us
-  p Whether you’re ready to get started, need more information or just want to say hi, fill in this contact form and we’ll be in touch within 24 hours.
-  form(netlify, name="contact")
-    label Name*
-      input(type="text", name="name" required)
-    label Email Address*
-      input(type="email", name="email" required)
-    label Current Website
-      input(type="url", name="website")
-    fieldset
-      legend I'm interested in...
-      label
-        input(type="radio", value="1" name="package")
-        | package 1
-      label
-        input(type="radio", value="2" name="package")
-        | package 2
-      label
-        input(type="radio", value="3" name="package")
-        | package 3
-    label Message
-      textarea(name="message") 
-    button send
+  .content
+    p Whether you’re ready to get started, need more information or just want to say hi, fill in this contact form and we’ll be in touch within 24 hours.
+    form(netlify, name="contact")
+      label Name*
+        input(type="text", name="name" required)
+      label Email Address*
+        input(type="email", name="email" required)
+      label Current Website
+        input(type="url", name="website")
+      fieldset
+        legend I'm interested in...
+        label
+          input(type="radio", value="1" name="package")
+          | package 1
+        label
+          input(type="radio", value="2" name="package")
+          | package 2
+        label
+          input(type="radio", value="3" name="package")
+          | package 3
+      label Message
+        textarea(name="message") 
+      button send
