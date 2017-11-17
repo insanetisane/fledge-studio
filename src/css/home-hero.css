@@ -1,5 +1,6 @@
 #home-hero {
   background-image: url(/assets/img/birds-flying.jpg);
+  image-rendering: -webkit-optimize-contrast;
   background-repeat: no-repeat;
   min-height: 25rem;
   max-width: 70rem;

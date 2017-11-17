@@ -1,5 +1,6 @@
 #cta-section {
   background-image: url(/assets/img/working-together.jpg);
+  image-rendering: -webkit-optimize-contrast;
   background-size: cover;
   height: 48rem;
   /* height: 52vw; */

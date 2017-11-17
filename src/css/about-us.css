@@ -3,6 +3,7 @@
   margin-top: var(--theme-space-default);
   padding-right: var(--theme-space-default);
   background-image: url(/assets/img/dillon-and-rachel.jpg);
+  image-rendering: -webkit-optimize-contrast;
   background-size: calc(20rem + 30vw);
   background-repeat: no-repeat;
   display: flex;
