@@ -1,5 +1,5 @@
 #home-hero {
-  background-image: url(/assets/img/birds-flying-md.jpg);
+  /* background-image: url(/assets/img/birds-flying-md.jpg); */
   image-rendering: -webkit-optimize-contrast;
   background-repeat: no-repeat;
   min-height: 25rem;
@@ -18,7 +18,7 @@
     background-position: right 100%;
     padding-top: 0;
     align-items: center;
-    background-image: url(/assets/img/birds-flying.jpg);    
+    /* background-image: url(/assets/img/birds-flying.jpg);     */
   }
 }
 #home-hero .content {
