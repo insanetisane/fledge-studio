@@ -1,14 +1,14 @@
 #cta-section {
-  background-image: url(/assets/img/working-together.jpg);
+  /* background-image: url(/assets/img/working-together.jpg); */
+  background-position: top center;
   image-rendering: -webkit-optimize-contrast;
   background-size: cover;
   height: 48rem;
-  /* height: 52vw; */
-  max-height: 62rem;
-  width: 100%;
+  max-height: 48vw;
+  justify-self: stretch;
 }
 #cta-section p {
-  margin: 1rem;
+  margin: var(--theme-space-default) 0;
   padding: 1rem;
   max-width: 32rem;
 }

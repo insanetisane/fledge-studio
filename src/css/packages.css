@@ -26,7 +26,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border-bottom: 1px solid var(--theme-primary-fade);
+  border-bottom: 1px solid var(--theme-text);
   padding-bottom: var(--theme-space-default);
   margin-bottom: var(--theme-space-default);
 }

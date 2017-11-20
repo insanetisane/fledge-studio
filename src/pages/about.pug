@@ -1,0 +1,22 @@
+extends /layouts/default.pug
+
+append settings
+  -
+    title = "Fledge Studio"
+    description = "Handcrafted, effective, and affordable websites."
+    page = 'p-about'
+
+append styles
+  style
+    include /css/about-hero.css
+    
+
+append main
+  section#about-hero
+    h1 
+      div.g-inverse about 
+      div.g-inverse us
+
+  include /components/cta-section
+  include /components/contact
+  

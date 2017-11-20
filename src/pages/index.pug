@@ -1,6 +1,5 @@
 extends /layouts/default.pug
 
-include /components/hello-world.pug
 append settings
   -
     title = "Fledge Studio"
@@ -22,7 +21,7 @@ append main
   header#home-hero
     .content
       h1.g-bg-primary-fade We handcraft effective and affordable websites.
-      a.g-cta(href="#") get started &gt;
+      a.g-cta(href="#contact") get started &gt;
 
   //- +loadCss("/assets/css/about-us.css")
   section#about-us
@@ -32,7 +31,7 @@ append main
       p We are a husband and wife team and co-founders of Fledge Studio, a web design and development studio based in Toronto.
       p.g-inverse.goal Our goal is to help other small business owners create a website that gets them hired.
       div.g-text-right
-        a.g-bg-secondary-fade.g-text-default.g-cta(href="#") more about us &gt;
+        a.g-bg-secondary-fade.g-text-default.g-cta(href="/about.html") more about us &gt;
 
   +loadCss("/assets/css/packages.css")
   section#packages

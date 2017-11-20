@@ -1,6 +1,7 @@
 #contact {
   margin-top: var(--theme-space-default);
   margin-bottom: var(--theme-space-default);
+  max-width: 90rem;
 }
 #contact .content {
   display: flex;
@@ -10,9 +11,8 @@
 #contact h2 {
   background-color: var(--theme-secondary-fade);
   padding: 1rem var(--theme-space-default);
-  margin-right: auto;
   margin-bottom: var(--theme-space-default);
-  flex: 0 0 auto;
+  display: inline-block;
 }
 #contact p {
   flex: 1 1 50%;
@@ -21,4 +21,7 @@
 }
 #contact form {
   flex: 1 1 50%;
+}
+#contact button {
+  --button-color: var(--theme-primary);
 }

@@ -1,0 +1,19 @@
+#about-hero {
+  text-align: right;
+  justify-self: stretch;
+}
+#about-hero h1 {
+  font-size: 10rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 31.6rem;
+  line-height: 1;
+}
+#about-hero h1 div {
+  padding: 0 var(--theme-space-default);
+}
+#about-hero h1 div + div {
+  margin-top: 1rem;
+}

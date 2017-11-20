@@ -1,4 +1,13 @@
-//- link(href="/assets/css/footer.css" rel="stylesheet")
-footer#footer
-  a(href="mailto:contact@fledgestudio.co") contact@fledgestudio.co
-  a(href="tel:contact@fledgestudio.co") 647-217-4207
++loadCss('/assets/css/footer.css')
+footer#footer.g-inverse.g-grid
+  .content
+    div.social
+      a.g-logo(href="/")
+        include /static/assets/img/logo.svg
+      a(href="mailto:contact@fledgestudio.co") contact@fledgestudio.co
+      a(href="https://instagram.com/fledgewebstudio") @fledgewebstudio
+    div.pages
+      a(href="/about.html", title="title") about us 
+      a(href="/#packages", title="title") our packages 
+      a(href="/#contact", title="title") contact us 
+      small &copy; 2017 Fledge Studio. All rights reserved.

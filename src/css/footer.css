@@ -1,0 +1,37 @@
+#footer {
+  padding: var(--theme-space-default) 0;
+}
+#footer .g-logo {
+  transform: translateX(-0.8rem);
+}
+#footer svg * {
+  fill: white;
+}
+#footer .content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#footer .content >:last-child {
+  text-align: right;
+}
+#footer a {
+  display: block;
+  color: currentColor;
+}
+#footer .social {
+  color: var(--theme-secondary);
+}
+#footer .pages {
+  text-transform: uppercase;
+}
+#footer .pages a {
+  font-weight: 100;
+}
+#footer a + a {
+  margin-top: 2rem;
+}
+#footer small {
+  display: inline-block;
+  margin-top: 4rem;
+}
